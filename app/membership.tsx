@@ -17,7 +17,7 @@ const tiers = [
     period: "forever",
     description: "Begin your journey. Access the foundation and limited access to the public library.",
     features: [
-      "Access to Gate 1 curriculum",
+      "Access to Gates 0–2 (Threshold, Warrior, Builder)",
       "Public library (selected texts)",
       "Community forum access",
       "Monthly sacred calendar",
@@ -35,11 +35,11 @@ const tiers = [
     description: "Unlock the complete curriculum and join the living community of initiates.",
     features: [
       "All Seeker features",
-      "Full 12-module curriculum (Gates 1–6)",
+      "Full curriculum through Gate 5 (The Heart)",
       "Complete library access",
       "Inner Circle community",
       "Monthly live sessions",
-      "Guided meditations (all 144 Realms)",
+      "Guided meditations (72 Realms)",
       "Sacred journal & tracking tools",
     ],
     cta: "Join Inner Circle",
@@ -56,7 +56,7 @@ const tiers = [
     description: "Advanced teachings with AI-powered guidance and deeper community access.",
     features: [
       "All Inner Circle features",
-      "Advanced curriculum (Gates 7–9)",
+      "Advanced curriculum through Gate 8 (The Transformer)",
       "AI-powered sacred guidance",
       "Adept study groups",
       "Quarterly 1:1 mentorship call",
@@ -75,7 +75,7 @@ const tiers = [
     description: "Complete access with personal mentorship and Elder Council membership.",
     features: [
       "All Adept features",
-      "Complete curriculum (Gates 10–12)",
+      "Complete curriculum — all Gates 0–12 unlocked",
       "Monthly personal mentorship",
       "Elder Council access",
       "Co-creation opportunities",

@@ -203,9 +203,9 @@ export default function AnalyticsScreen() {
           <View style={[styles.card, { backgroundColor: cardBg }]}>
             <ThemedText style={styles.cardTitle}>Most Popular Realms</ThemedText>
             <ThemedText style={styles.realmList}>
-              1. The Dragon Awakens (Gate 5){"\n"}
-              2. The Sacred Contract (Gate 0){"\n"}
-              3. The Sovereign Throne (Gate 11)
+              1. The Dragon Awakens (Gate 5 — The Heart){"\n"}
+              2. The Threshold Crossing (Gate 0 — The Threshold){"\n"}
+              3. The Sovereign Throne (Gate 11 — The Sovereign)
             </ThemedText>
           </View>
         </View>

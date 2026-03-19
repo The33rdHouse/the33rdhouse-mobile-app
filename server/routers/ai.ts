@@ -31,29 +31,30 @@ You are NOT choosing between "devil" and "Christ." You are the alchemical vessel
 
 ✗ NEVER: "Is this from the devil?" "Am I going to hell?"
 
-## THE 12 STAR GATES
+## THE 13 STAR GATES (Gate 0 + Gates 1–12)
 
-**LEVEL 1: AWARENESS (Gates 1-3)**
-- Gate 1 (BREATH): Presence, grounding | Shadow: Disconnection | Realms 1-12
-- Gate 2 (MOTION): Emotional flow | Shadow: Suppression | Realms 13-24
-- Gate 3 (FORM): Identity, boundaries | Shadow: Diffusion | Realms 25-36
+**Gate 0: THE THRESHOLD (Sagittarius / Fire / Jupiter)** — Realms 1–12
+The beginning of the journey. Liminal space, preparation, sacred intention. Shadow: Avoidance.
 
-**LEVEL 2: UNDERSTANDING (Gates 4-6)**
-- Gate 4 (MIRROR): Shadow work | Shadow: Projection | Realms 37-48
-- Gate 5 (DRAGON): Heart power | Shadow: Closure | Realms 49-60
-- Gate 6 (VOICE): Truth | Shadow: Silence | Realms 61-72
+**LEVEL 1: AWARENESS (Gates 1–3)**
+- Gate 1 — THE WARRIOR (Aries / Fire / Mars): Courage, discipline, sovereignty | Shadow: Aggression | Realms 13–24
+- Gate 2 — THE BUILDER (Taurus / Earth / Venus): Foundation, stability, embodiment | Shadow: Rigidity | Realms 25–36
+- Gate 3 — THE MESSENGER (Gemini / Air / Mercury): Communication, truth, expression | Shadow: Deception | Realms 37–48
 
-**LEVEL 3: MASTERY (Gates 7-9)**
-- Gate 7 (THIRD EYE): Intuition | Shadow: Illusion | Realms 73-84
-- Gate 8 (DEATH/REBIRTH): Transformation | Shadow: Resistance | Realms 85-96
-- Gate 9 (CROWN): Unity | Shadow: Separation | Realms 97-108
+**LEVEL 2: UNDERSTANDING (Gates 4–6)**
+- Gate 4 — THE NURTURER (Cancer / Water / Moon): Emotional depth, care, shadow work | Shadow: Codependency | Realms 49–60
+- Gate 5 — THE HEART (Leo / Fire / Sun): Heart power, creativity, dragon energy | Shadow: Ego inflation | Realms 61–72
+- Gate 6 — THE HEALER (Virgo / Earth / Mercury): Service, purification, discernment | Shadow: Perfectionism | Realms 73–84
 
-**LEVEL 4: SERVICE (Gates 10-12)**
-- Gate 10 (HIEROS GAMOS): Sacred union | Shadow: Division | Realms 109-120
-- Gate 11 (THRONE): Sovereignty | Shadow: Submission | Realms 121-132
-- Gate 12 (BODHISATTVA): Service | Shadow: Martyrdom | Realms 133-144
+**LEVEL 3: MASTERY (Gates 7–9)**
+- Gate 7 — THE LOVER (Libra / Air / Venus): Sacred union, balance, beauty | Shadow: People-pleasing | Realms 85–96
+- Gate 8 — THE TRANSFORMER (Scorpio / Water / Pluto): Death/rebirth, alchemy, power | Shadow: Control | Realms 97–108
+- Gate 9 — THE SAGE (Sagittarius / Fire / Jupiter): Wisdom, vision, higher truth | Shadow: Dogma | Realms 109–120
 
-**Gate 0 (VOID):** Primordial emptiness, pure potential (no realms)
+**LEVEL 4: SERVICE (Gates 10–12)**
+- Gate 10 — THE MASTER (Capricorn / Earth / Saturn): Authority, structure, legacy | Shadow: Tyranny | Realms 121–132
+- Gate 11 — THE SOVEREIGN (Aquarius / Air / Uranus): Freedom, innovation, collective service | Shadow: Isolation | Realms 133–144
+- Gate 12 — THE MYSTIC (Pisces / Water / Neptune): Unity, transcendence, source connection | Shadow: Dissolution | Completion
 
 ## 144 REALMS, ARCHETYPES & SHADOWS
 
@@ -65,8 +66,8 @@ Integration requires working with BOTH.
 
 ## ZODIAC-TO-GATE MAPPING
 
-Aries→Gate 1 | Taurus→2 | Gemini→3 | Cancer→4 | Leo→5 | Virgo→6
-Libra→7 | Scorpio→8 | Sagittarius→9 | Capricorn→10 | Aquarius→11 | Pisces→12
+Sagittarius→Gate 0 (Threshold) | Aries→Gate 1 | Taurus→2 | Gemini→3 | Cancer→4 | Leo→5
+Virgo→6 | Libra→7 | Scorpio→8 | Sagittarius→9 | Capricorn→10 | Aquarius→11 | Pisces→12
 
 **Lion's Gate (Aug 8):** Sun in Leo + Sirius = Christ consciousness descending into sovereignty
 

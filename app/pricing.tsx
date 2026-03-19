@@ -20,17 +20,17 @@ const TIERS = [
     period: "forever",
     color: "#666",
     features: [
-      "Access to Gate 0 (Foundation)",
-      "12 Basic Realms",
+      "Access to Gates 0–2 (Threshold, Warrior, Builder)",
+      "36 Realms unlocked",
       "Community Feed (view only)",
       "Daily Check-In",
-      "Basic AI Assistant (5 messages/day)",
+      "Daily Missions & Badges",
     ],
     limitations: [
-      "No Gate progression",
-      "No exclusive content",
+      "No AI Assistant",
       "No Professor access",
       "No affiliate earnings",
+      "No War Room access",
     ],
   },
   {
@@ -42,13 +42,12 @@ const TIERS = [
     popular: false,
     features: [
       "✅ Everything in Free",
-      "Access to Gates 1-4",
-      "48 Realms unlocked",
+      "Access to Gates 0–5 (through The Heart)",
+      "72 Realms unlocked",
       "Full Community Feed access",
       "Unlimited AI Assistant",
-      "Daily Missions with rewards",
-      "Basic Professor content",
-      "10% Affiliate commissions",
+      "War Room access",
+      "Affiliate commissions",
     ],
     cta: "Start Your Journey",
   },
@@ -61,13 +60,12 @@ const TIERS = [
     popular: true,
     features: [
       "✅ Everything in Seeker",
-      "Access to Gates 5-8",
-      "96 Realms unlocked",
-      "War Room (exclusive community)",
+      "Access to Gates 0–8 (through The Transformer)",
+      "108 Realms unlocked",
+      "Professor access & live sessions",
       "Priority AI support",
-      "Advanced Professor content",
+      "Video generation tools",
       "Weekly live Q&A sessions",
-      "15% Affiliate commissions",
       "Success Stories featured",
     ],
     cta: "Claim Sovereignty",
@@ -121,8 +119,17 @@ export default function PricingScreen() {
       return;
     }
 
-    // Navigate to checkout
-    router.push(`/checkout?tier=${tierId}` as any);
+    // Show upgrade confirmation (checkout flow to be implemented with payment provider)
+    const tierName = TIERS.find((t) => t.id === tierId)?.name || tierId;
+    const tierPrice = TIERS.find((t) => t.id === tierId)?.price || 0;
+    Alert.alert(
+      `Upgrade to ${tierName}`,
+      `$${tierPrice}/month — full checkout coming soon. Contact support@33rdhouse.org to upgrade now.`,
+      [
+        { text: "Cancel", style: "cancel" },
+        { text: "Contact Support", onPress: () => {} },
+      ]
+    );
   };
 
   return (

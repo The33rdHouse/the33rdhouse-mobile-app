@@ -448,7 +448,8 @@ export const REALMS_DATA: Realm[] = [
   // Gate 9: The Sage (Sagittarius) - Realms 109-120
   // Gate 10: The Master (Capricorn) - Realms 121-132
   // Gate 11: The Sovereign (Aquarius) - Realms 133-144
-  // Gate 12: The Mystic (Pisces) - Realms 145-156 (but we only have 144, so 133-144)
+  // Note: Gate 12 (The Mystic / Pisces) is the completion gate with no additional realms.
+  // The 144 realms span Gates 0-11 (13 gates × ~12 realms, with Gate 0 holding Realms 1-12).
 
   // For MVP, we'll generate placeholder data for the remaining realms
   ...Array.from({ length: 120 }, (_, i) => {
@@ -467,6 +468,7 @@ export const REALMS_DATA: Realm[] = [
       "The Sage",
       "The Master",
       "The Sovereign",
+      "The Mystic",
     ];
     const zodiacs = [
       "Sagittarius",
@@ -481,6 +483,7 @@ export const REALMS_DATA: Realm[] = [
       "Sagittarius",
       "Capricorn",
       "Aquarius",
+      "Pisces",
     ];
     const elements = [
       "Fire",
@@ -495,6 +498,7 @@ export const REALMS_DATA: Realm[] = [
       "Fire",
       "Earth",
       "Air",
+      "Water",
     ];
     const planets = [
       "Jupiter",
@@ -509,6 +513,7 @@ export const REALMS_DATA: Realm[] = [
       "Jupiter",
       "Saturn",
       "Uranus",
+      "Neptune",
     ];
 
     return {

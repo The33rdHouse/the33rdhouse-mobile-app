@@ -159,7 +159,7 @@ export default function GenesisScreen() {
                     style={{ flexDirection: "row", alignItems: "center", flex: 1 }}
                     onPress={(e) => {
                       e.stopPropagation();
-                      router.push(`/user/${post.userId}` as any);
+                      // User profile screen not yet implemented
                     }}
                   >
                     <View style={[styles.avatar, { backgroundColor: tintColor }]}>

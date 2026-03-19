@@ -89,7 +89,7 @@ export default function PostDetailScreen() {
           <View style={[styles.postCard, { backgroundColor: cardBg }]}>
             <Pressable
               style={styles.postHeader}
-              onPress={() => router.push(`/user/${post.userId}` as any)}
+              onPress={() => { /* User profile screen not yet implemented */ }}
             >
               <View style={[styles.avatar, { backgroundColor: tintColor }]}>
                 <ThemedText style={styles.avatarText}>U</ThemedText>
@@ -140,7 +140,7 @@ export default function PostDetailScreen() {
                 <View key={comment.id} style={[styles.commentCard, { backgroundColor: cardBg }]}>
                   <Pressable
                     style={styles.commentHeader}
-                    onPress={() => router.push(`/user/${comment.userId}` as any)}
+                    onPress={() => { /* User profile screen not yet implemented */ }}
                   >
                     <View style={[styles.smallAvatar, { backgroundColor: tintColor }]}>
                       <ThemedText style={styles.smallAvatarText}>U</ThemedText>

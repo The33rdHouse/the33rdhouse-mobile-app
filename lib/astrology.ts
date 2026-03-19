@@ -158,7 +158,7 @@ export function getCurrentTransits(
   // Moon phase recommendations
   if (moonPhaseData.phase === "New Moon") {
     recommendations.push("New beginnings - Set intentions for the lunar cycle");
-    recommendations.push("Gate 0 practices - Sacred contracts and commitments");
+    recommendations.push("Gate 0 (The Threshold) practices - Sacred intention and preparation");
   } else if (moonPhaseData.phase === "Full Moon") {
     recommendations.push("Culmination and release - Complete what you started");
     recommendations.push("Shadow work - What needs to be released?");
