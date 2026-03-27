@@ -2,88 +2,94 @@
  * Membership Screen — The 33rd House
  * Membership tiers, the covenant of entry, and FAQ.
  */
-import { ScrollView, View, StyleSheet, Pressable } from "react-native";
+import { ScrollView, View, StyleSheet, Pressable, Alert, Linking } from "react-native";
 import { Stack, router } from "expo-router";
 import { ThemedText } from "@/components/themed-text";
 import { ThemedView } from "@/components/themed-view";
 import { ScreenHeader } from "@/components/screen-header";
 import { useThemeColor } from "@/hooks/use-theme-color";
 
+const STRIPE_PAYMENT_LINKS: Record<string, string> = {
+  seeker: "https://buy.stripe.com/14AeVe9Rh3wD98L552aR20O",
+  sovereign: "https://buy.stripe.com/00wbJ2bZpebh98L1SQaR20P",
+  ascended: "https://buy.stripe.com/7sYfZi3sTd7ddp1apmaR20Q",
+};
+
 const tiers = [
   {
-    key: "seeker",
-    name: "Seeker",
+    key: "free",
+    name: "Free",
     price: "Free",
     period: "forever",
-    description: "Begin your journey. Access the foundation and limited access to the public library.",
+    description: "Begin your journey. Access the foundation and the public library.",
     features: [
-      "Access to Gates 0–2 (Threshold, Warrior, Builder)",
-      "Public library (selected texts)",
-      "Community forum access",
-      "Monthly sacred calendar",
+      "Access to Gates 0\u20132 (Threshold, Warrior, Builder)",
+      "36 Realms unlocked",
+      "Community forum access (view only)",
+      "Daily check-in & missions",
       "The 33rd House newsletter",
     ],
     cta: "Start Free",
-    icon: "🔥",
+    icon: "\uD83D\uDD25",
     color: "#7C3AED",
   },
   {
-    key: "inner-circle",
-    name: "Inner Circle",
-    price: "$27",
+    key: "seeker",
+    name: "Seeker",
+    price: "$33",
     period: "/month",
-    description: "Unlock the complete curriculum and join the living community of initiates.",
+    description: "Unlock the full curriculum through Gate 5 and join the living community.",
     features: [
-      "All Seeker features",
-      "Full curriculum through Gate 5 (The Heart)",
-      "Complete library access",
-      "Inner Circle community",
-      "Monthly live sessions",
-      "Guided meditations (72 Realms)",
-      "Sacred journal & tracking tools",
+      "All Free features",
+      "Access to Gates 0\u20135 (through The Heart)",
+      "72 Realms unlocked",
+      "Full community feed access",
+      "Unlimited AI Oracle",
+      "War Room access",
+      "Affiliate commissions",
     ],
-    cta: "Join Inner Circle",
+    cta: "Start Your Journey",
     highlighted: true,
     badge: "Most Popular",
-    icon: "✨",
+    icon: "\u2728",
     color: "#9333ea",
   },
   {
-    key: "adept",
-    name: "Adept",
-    price: "$97",
+    key: "sovereign",
+    name: "Sovereign",
+    price: "$88",
     period: "/month",
-    description: "Advanced teachings with AI-powered guidance and deeper community access.",
+    description: "Advanced teachings with AI-powered guidance and Professor access.",
     features: [
-      "All Inner Circle features",
-      "Advanced curriculum through Gate 8 (The Transformer)",
-      "AI-powered sacred guidance",
-      "Adept study groups",
-      "Quarterly 1:1 mentorship call",
-      "Advanced meditation library",
-      "Priority community support",
+      "All Seeker features",
+      "Access to Gates 0\u20138 (through The Transformer)",
+      "108 Realms unlocked",
+      "Professor access & live sessions",
+      "Priority AI support",
+      "Video generation tools",
+      "Weekly live Q&A sessions",
     ],
-    cta: "Unlock Adept",
-    icon: "⭐",
+    cta: "Claim Sovereignty",
+    icon: "\u2B50",
     color: "#1D4ED8",
   },
   {
-    key: "elder",
-    name: "Elder",
+    key: "ascended",
+    name: "Ascended",
     price: "$297",
     period: "/month",
-    description: "Complete access with personal mentorship and Elder Council membership.",
+    description: "Complete access with personal mentorship, DAO governance, and Elder Council.",
     features: [
-      "All Adept features",
-      "Complete curriculum — all Gates 0–12 unlocked",
-      "Monthly personal mentorship",
-      "Elder Council access",
-      "Co-creation opportunities",
-      "Early access to new teachings",
+      "All Sovereign features",
+      "Complete curriculum \u2014 all Gates 0\u201312 unlocked",
+      "All 144 Realms unlocked",
+      "1-on-1 coaching (2 sessions/month)",
+      "Private Mastermind Group",
+      "DAO governance & NFT minting",
       "Legacy membership benefits",
     ],
-    cta: "Join Elder Circle",
-    icon: "👑",
+    cta: "Ascend Now",
+    icon: "\uD83D\uDC51",
     color: "#C9A84C",
   },
 ];
@@ -184,7 +190,21 @@ export default function MembershipScreen() {
                     ? { backgroundColor: tier.color }
                     : { backgroundColor: tier.color + "20", borderColor: tier.color, borderWidth: 1 },
                 ]}
-                onPress={() => router.push("/pricing" as any)}
+                onPress={() => {
+                  const link = STRIPE_PAYMENT_LINKS[tier.key];
+                  if (!link) {
+                    router.push("/pricing" as any);
+                    return;
+                  }
+                  Alert.alert(
+                    `Upgrade to ${tier.name}`,
+                    `${tier.price}${tier.period} \u2014 you will be redirected to our secure payment page.`,
+                    [
+                      { text: "Cancel", style: "cancel" },
+                      { text: "Continue to Payment", onPress: () => Linking.openURL(link) },
+                    ]
+                  );
+                }}
               >
                 <ThemedText
                   style={[styles.tierCtaText, { color: tier.highlighted ? "#fff" : tier.color }]}

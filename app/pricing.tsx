@@ -5,12 +5,19 @@ import {
   ScrollView,
   Pressable,
   Alert,
+  Linking,
 } from "react-native";
 import { Stack, router } from "expo-router";
 import { ThemedText } from "@/components/themed-text";
 import { ThemedView } from "@/components/themed-view";
 import { useThemeColor } from "@/hooks/use-theme-color";
 import { useAuth } from "@/hooks/use-auth";
+
+const STRIPE_PAYMENT_LINKS: Record<string, string> = {
+  seeker: "https://buy.stripe.com/14AeVe9Rh3wD98L552aR20O",
+  sovereign: "https://buy.stripe.com/00wbJ2bZpebh98L1SQaR20P",
+  ascended: "https://buy.stripe.com/7sYfZi3sTd7ddp1apmaR20Q",
+};
 
 const TIERS = [
   {
@@ -54,7 +61,7 @@ const TIERS = [
   {
     id: "sovereign",
     name: "Sovereign",
-    price: 333,
+    price: 88,
     period: "month",
     color: "#e74c3c",
     popular: true,
@@ -73,7 +80,7 @@ const TIERS = [
   {
     id: "ascended",
     name: "Ascended",
-    price: 3333,
+    price: 297,
     period: "month",
     color: "#f39c12",
     popular: false,
@@ -119,15 +126,23 @@ export default function PricingScreen() {
       return;
     }
 
-    // Show upgrade confirmation (checkout flow to be implemented with payment provider)
+    const paymentLink = STRIPE_PAYMENT_LINKS[tierId];
+    if (!paymentLink) {
+      Alert.alert("Error", "Payment link not available for this tier.");
+      return;
+    }
+
     const tierName = TIERS.find((t) => t.id === tierId)?.name || tierId;
     const tierPrice = TIERS.find((t) => t.id === tierId)?.price || 0;
     Alert.alert(
       `Upgrade to ${tierName}`,
-      `$${tierPrice}/month — full checkout coming soon. Contact support@33rdhouse.org to upgrade now.`,
+      `$${tierPrice}/month — you will be redirected to our secure payment page.`,
       [
         { text: "Cancel", style: "cancel" },
-        { text: "Contact Support", onPress: () => {} },
+        {
+          text: "Continue to Payment",
+          onPress: () => Linking.openURL(paymentLink),
+        },
       ]
     );
   };
