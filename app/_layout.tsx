@@ -92,6 +92,7 @@ export default function RootLayout() {
               <Stack.Screen name="curriculum" options={{ headerShown: false }} />
               <Stack.Screen name="founder" options={{ headerShown: false }} />
               <Stack.Screen name="membership" options={{ headerShown: false }} />
+              <Stack.Screen name="user/[id]" options={{ headerShown: false }} />
             </Stack>
             <StatusBar style="auto" />
           </ThemeProvider>
