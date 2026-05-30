@@ -5,11 +5,17 @@ on:
     branches: ["**"]
   pull_request:
     branches: ["**"]
+  workflow_dispatch:
 
 jobs:
   ci:
-    name: Build & Test
-    runs-on: ubuntu-latest
+    name: Build & Test (Matrix)
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        node-version: [20, 22]
     permissions:
       contents: read
 
@@ -25,7 +31,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: ${{ matrix.node-version }}
           cache: pnpm
 
       - name: Install dependencies
@@ -37,8 +43,18 @@ jobs:
       - name: Lint
         run: pnpm lint
 
+      - name: Security audit
+        run: pnpm audit --audit-level=moderate || true
+
       - name: Run tests
         run: pnpm test
 
       - name: Build server
         run: pnpm build
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: server-dist-${{ matrix.os }}-node${{ matrix.node-version }}
+          path: dist/
+          retention-days: 5
