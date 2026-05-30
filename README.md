@@ -1,3 +1,5 @@
+master
+
 # Expo Mobile Template
 
 A React Native mobile app template built with **Expo SDK 54**, **TypeScript**, and **React 19**. This template provides everything you need to build beautiful, performant iOS-style mobile applications.
